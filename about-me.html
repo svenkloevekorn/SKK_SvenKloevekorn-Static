@@ -160,7 +160,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.3s ease-in 0.5s;
+            transition: opacity 0.25s ease-in 0.1s;
         }
 
         .nav-expanded .nav-toggle-wrapper {
@@ -227,13 +227,13 @@
             transition-delay: 0.6s;
         }
 
-        /* Menu icon - gentle rotation */
+        /* Menu icon - no rotation, just fade */
         .menu-icon {
-            transition: transform 0.4s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
         }
 
         .nav-expanded .menu-icon {
-            transform: rotate(90deg);
+            opacity: 0;
         }
 
         /* Gentle hover effect */
