@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sven Klövekorn – IT Project Manager & Requirements Engineer</title>
+    <meta name="description"
+        content="Senior IT Project Manager and Requirements Engineer near Ulm with focus on web applications and digital services. 14+ years experience.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        accent: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .fade-in-delay {
+            animation: fadeIn 0.8s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        /* Animated underline on hover */
+        .link-underline {
+            position: relative;
+            display: inline-block;
+        }
+
+        .link-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+
+        .link-underline:hover::after {
+            width: 100%;
+        }
+
+        /* Soft gradient backgrounds */
+        .gradient-soft {
+            background: linear-gradient(180deg,
+                    rgba(248, 250, 252, 0) 0%,
+                    rgba(248, 250, 252, 0.5) 50%,
+                    rgba(248, 250, 252, 0) 100%);
+        }
+
+        .dark .gradient-soft {
+            background: linear-gradient(180deg,
+                    rgba(15, 23, 42, 0) 0%,
+                    rgba(15, 23, 42, 0.5) 50%,
+                    rgba(15, 23, 42, 0) 100%);
+        }
+
+        /* Card hover lift effect */
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .dark .card-hover:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Smooth transitions */
+        .transition-smooth {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 transition-colors duration-500">
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle"
+        class="fixed top-6 right-6 z-50 p-3 rounded-full bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm border border-neutral-200 dark:border-neutral-700 hover:scale-110 transition-all duration-300 shadow-lg"
+        aria-label="Toggle theme">
+        <svg class="w-5 h-5 hidden dark:block text-neutral-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+            </path>
+        </svg>
+        <svg class="w-5 h-5 block dark:hidden text-neutral-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center px-6 py-20 overflow-hidden">
+        <!-- Subtle gradient background -->
+        <div
+            class="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-neutral-50 dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto w-full">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Text Content -->
+                <div class="space-y-8 fade-in order-2 lg:order-1">
+                    <div class="space-y-6">
+                        <p class="text-lg font-medium text-neutral-600 dark:text-neutral-400 tracking-wide uppercase">
+                            Sven Klövekorn
+                        </p>
+                        <h1
+                            class="font-display text-5xl md:text-6xl lg:text-7xl font-medium text-neutral-900 dark:text-neutral-50 leading-[1.1] tracking-tight">
+                            Navigating Projects with Design Precision and Tech Insight
+                        </h1>
+                    </div>
+                    <p class="text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-xl">
+                        I'm Sven, a Senior IT Project Manager and Requirements Engineer near Ulm with a focus on web
+                        applications and digital services. With over 14 years practical experience!
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-6">
+                        <a href="#contact"
+                            class="group px-8 py-4 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 rounded-md hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105">
+                            Let's Talk
+                            <span class="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
+                        <a href="#projects"
+                            class="px-8 py-4 border-2 border-neutral-300 dark:border-neutral-700 rounded-md hover:bg-neutral-50 dark:hover:bg-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-300 font-medium">
+                            View Work
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Portrait Image - Larger, 50% width on desktop -->
+                <div class="flex justify-center lg:justify-end fade-in-delay order-1 lg:order-2">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-neutral-200 to-neutral-300 dark:from-neutral-700 dark:to-neutral-600 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-500">
+                        </div>
+                        <div
+                            class="relative w-full max-w-md lg:w-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl">
+                            <img src="assets/sven-kloevekorn-privat.jpg" alt="Sven Klövekorn"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - Overlapping with soft background -->
+    <section id="services" class="relative px-6 py-32 -mt-20">
+        <div class="absolute inset-0 gradient-soft"></div>
+
+        <div class="relative max-w-6xl mx-auto">
+            <div class="mb-20 fade-in">
+                <h2
+                    class="font-display text-4xl md:text-5xl font-medium text-neutral-900 dark:text-neutral-50 mb-4 tracking-tight">
+                    What I Do</h2>
+                <p class="text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl">Core competencies that drive
+                    successful digital transformation</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div
+                    class="group p-10 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 card-hover">
+                    <div
+                        class="w-14 h-14 mb-6 text-accent-600 dark:text-accent-400 transition-transform duration-300 group-hover:scale-110">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-4">Software Conception</h3>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">Strategic planning and
+                        architectural design of software systems that align with business objectives and scale with
+                        organizational growth.</p>
+                </div>
+
+                <div
+                    class="group p-10 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 card-hover">
+                    <div
+                        class="w-14 h-14 mb-6 text-accent-600 dark:text-accent-400 transition-transform duration-300 group-hover:scale-110">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-4">UX Strategy & Design
+                    </h3>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">Creating user-centered experiences
+                        through research, prototyping, and iterative design that balance user needs with business goals.
+                    </p>
+                </div>
+
+                <div
+                    class="group p-10 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 card-hover">
+                    <div
+                        class="w-14 h-14 mb-6 text-accent-600 dark:text-accent-400 transition-transform duration-300 group-hover:scale-110">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-4">IT Project Management
+                    </h3>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">Leading cross-functional teams
+                        through complex initiatives using agile methodologies, ensuring on-time delivery and stakeholder
+                        satisfaction.</p>
+                </div>
+
+                <div
+                    class="group p-10 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 card-hover">
+                    <div
+                        class="w-14 h-14 mb-6 text-accent-600 dark:text-accent-400 transition-transform duration-300 group-hover:scale-110">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-4">Requirements Engineering
+                    </h3>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">Systematic elicitation, analysis,
+                        and documentation of requirements to ensure project clarity and minimize costly changes
+                        downstream.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifications Section -->
+    <section class="relative px-6 py-32">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-20 fade-in">
+                <h2
+                    class="font-display text-4xl md:text-5xl font-medium text-neutral-900 dark:text-neutral-50 mb-4 tracking-tight">
+                    Qualifications</h2>
+                <p class="text-xl text-neutral-600 dark:text-neutral-400">Professional certifications and academic
+                    background</p>
+            </div>
+
+            <div class="space-y-4">
+                <div
+                    class="group flex items-start gap-6 p-8 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 transition-smooth hover:bg-white dark:hover:bg-neutral-900">
+                    <div
+                        class="w-3 h-3 mt-2 rounded-full bg-accent-600 dark:bg-accent-400 flex-shrink-0 group-hover:scale-125 transition-transform">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Diploma, Information
+                            Management and Corporate Communication</h3>
+                        <p class="text-neutral-600 dark:text-neutral-400">Foundation in strategic communication and
+                            information systems</p>
+                    </div>
+                </div>
+
+                <div
+                    class="group flex items-start gap-6 p-8 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 transition-smooth hover:bg-white dark:hover:bg-neutral-900">
+                    <div
+                        class="w-3 h-3 mt-2 rounded-full bg-accent-600 dark:bg-accent-400 flex-shrink-0 group-hover:scale-125 transition-transform">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">IREB Certified
+                            Professional for Requirements Engineering</h3>
+                        <p class="text-neutral-600 dark:text-neutral-400">International certification in systematic
+                            requirements engineering practices</p>
+                    </div>
+                </div>
+
+                <div
+                    class="group flex items-start gap-6 p-8 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 transition-smooth hover:bg-white dark:hover:bg-neutral-900">
+                    <div
+                        class="w-3 h-3 mt-2 rounded-full bg-accent-600 dark:bg-accent-400 flex-shrink-0 group-hover:scale-125 transition-transform">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Professional Scrum
+                            Master™ I (PSM I)</h3>
+                        <p class="text-neutral-600 dark:text-neutral-400">Certified in agile project management and
+                            Scrum framework</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="relative px-6 py-32">
+        <div class="absolute inset-0 gradient-soft"></div>
+
+        <div class="relative max-w-6xl mx-auto">
+            <div class="mb-20 fade-in">
+                <h2
+                    class="font-display text-4xl md:text-5xl font-medium text-neutral-900 dark:text-neutral-50 mb-4 tracking-tight">
+                    Experience</h2>
+                <p class="text-xl text-neutral-600 dark:text-neutral-400">Key milestones in my professional journey</p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- marbet - Current Position -->
+                <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
+                    <div
+                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent-600 dark:bg-accent-400 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
+                    </div>
+                    <div class="mb-3">
+                        <span
+                            class="inline-block px-4 py-1 text-sm font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">Jan.
+                            2024 – Heute</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Account Manager Digital
+                        Solutions</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">marbet · Vollzeit</p>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Schwäbisch Hall,
+                        Baden-Württemberg · Hybrid</p>
+                </div>
+
+                <!-- marbet - Senior IT Project Manager -->
+                <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
+                    <div
+                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-700 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
+                    </div>
+                    <div class="mb-3">
+                        <span
+                            class="inline-block px-4 py-1 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full">Juli
+                            2022 – Dez. 2023</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Senior IT Project
+                        Manager</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">marbet · Vollzeit</p>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Schwäbisch Hall,
+                        Baden-Württemberg · Hybrid</p>
+                </div>
+
+                <!-- BEQN GmbH - Geschäftsführer (Current) -->
+                <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
+                    <div
+                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent-600 dark:bg-accent-400 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
+                    </div>
+                    <div class="mb-3">
+                        <span
+                            class="inline-block px-4 py-1 text-sm font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">Juli
+                            2022 – Heute</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Geschäftsführer</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">BEQN GmbH · Teilzeit</p>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Günzburg, Bayern ·
+                        Hybrid<br>
+                        <span class="text-sm text-neutral-500 dark:text-neutral-500 mt-2 inline-block">Kenntnisse:
+                            Virtuelle Events, Webentwicklung</span>
+                    </p>
+                </div>
+
+                <!-- BEQN GmbH - Geschäftsführer (Previous) -->
+                <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
+                    <div
+                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-700 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
+                    </div>
+                    <div class="mb-3">
+                        <span
+                            class="inline-block px-4 py-1 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full">März
+                            2014 – Juli 2022</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Geschäftsführer</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">BEQN GmbH · Vollzeit</p>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Günzburg, Bayern ·
+                        Hybrid</p>
+                </div>
+
+                <!-- Hochschule Neu-Ulm - Dozent (Current) -->
+                <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
+                    <div
+                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent-600 dark:bg-accent-400 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
+                    </div>
+                    <div class="mb-3">
+                        <span
+                            class="inline-block px-4 py-1 text-sm font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">März
+                            2013 – Heute</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Mediendesign Dozent</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">Hochschule Neu-Ulm · Fakultät
+                        Informationsmanagement</p>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Neu-Ulm, Bayern · Hybrid
+                    </p>
+                </div>
+
+                <!-- Hochschule Neu-Ulm - Zentrum für Digitale Lehre -->
+                <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
+                    <div
+                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-700 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
+                    </div>
+                    <div class="mb-3">
+                        <span
+                            class="inline-block px-4 py-1 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full">März
+                            2019 – Dez. 2020</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Zentrum für Digitale
+                        Lehre</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">Hochschule Neu-Ulm · Teilzeit</p>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Neu-Ulm, Bayern · Hybrid
+                    </p>
+                </div>
+
+                <!-- MUNK Group - E-Commerce Manager -->
+                <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
+                    <div
+                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-700 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
+                    </div>
+                    <div class="mb-3">
+                        <span
+                            class="inline-block px-4 py-1 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full">Feb.
+                            2016 – März 2019</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">E-Commerce-Manager</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">MUNK Group · Vollzeit</p>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Günzburg, Bayern · Vor
+                        Ort<br>
+                        <span class="text-sm text-neutral-500 dark:text-neutral-500 mt-2 inline-block">Kenntnisse:
+                            E-Commerce, Shopware</span>
+                    </p>
+                </div>
+
+                <!-- Wanzl Group - Onlinemarketing Manager -->
+                <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
+                    <div
+                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-700 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
+                    </div>
+                    <div class="mb-3">
+                        <span
+                            class="inline-block px-4 py-1 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full">Aug.
+                            2011 – Aug. 2013</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Onlinemarketing Manager
+                    </h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">Wanzl Group · Vollzeit</p>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Leipheim, Bayern · Vor
+                        Ort</p>
+                </div>
+
+                <!-- KUKA - Werkstudent -->
+                <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
+                    <div
+                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-700 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
+                    </div>
+                    <div class="mb-3">
+                        <span
+                            class="inline-block px-4 py-1 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full">März
+                            2007 – Jan. 2008</span>
+                    </div>
+                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Werkstudent Portals
+                        Content & Collaboration</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">KUKA</p>
+                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Gersthofen, Bayern · Vor
+                        Ort</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="relative px-6 py-32">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-20 fade-in">
+                <h2
+                    class="font-display text-4xl md:text-5xl font-medium text-neutral-900 dark:text-neutral-50 mb-4 tracking-tight">
+                    Selected Projects</h2>
+                <p class="text-xl text-neutral-600 dark:text-neutral-400">Recent work that demonstrates impact and
+                    expertise</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div
+                    class="group bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl overflow-hidden border border-neutral-200/50 dark:border-neutral-800/50 card-hover">
+                    <div
+                        class="h-56 bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">UX
+                                Strategy</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">Digital
+                                Banking</span>
+                        </div>
+                        <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-4">Next-Gen Banking
+                            Platform</h3>
+                        <p class="text-neutral-600 dark:text-neutral-400 mb-5 leading-relaxed">Led UX strategy for a
+                            complete digital banking redesign serving 2M+ users. Increased customer satisfaction by 42%
+                            and reduced support tickets by 28%.</p>
+                        <p class="text-sm text-accent-600 dark:text-accent-400 font-medium">Role: Lead UX Strategist &
+                            Project Manager</p>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl overflow-hidden border border-neutral-200/50 dark:border-neutral-800/50 card-hover">
+                    <div
+                        class="h-56 bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">Requirements
+                                Engineering</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">Healthcare</span>
+                        </div>
+                        <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-4">Patient Management
+                            System</h3>
+                        <p class="text-neutral-600 dark:text-neutral-400 mb-5 leading-relaxed">Architected requirements
+                            for a HIPAA-compliant patient management system. Delivered on time and 15% under budget, now
+                            used by 50+ healthcare facilities.</p>
+                        <p class="text-sm text-accent-600 dark:text-accent-400 font-medium">Role: Requirements Engineer
+                            & Technical Lead</p>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl overflow-hidden border border-neutral-200/50 dark:border-neutral-800/50 card-hover">
+                    <div
+                        class="h-56 bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">Agile
+                                Delivery</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">E-Commerce</span>
+                        </div>
+                        <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-4">Omnichannel Retail
+                            Platform</h3>
+                        <p class="text-neutral-600 dark:text-neutral-400 mb-5 leading-relaxed">Managed agile
+                            transformation and platform migration for a leading retailer. Achieved 99.9% uptime during
+                            transition and 60% improvement in page load times.</p>
+                        <p class="text-sm text-accent-600 dark:text-accent-400 font-medium">Role: Scrum Master &
+                            Delivery Manager</p>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl overflow-hidden border border-neutral-200/50 dark:border-neutral-800/50 card-hover">
+                    <div
+                        class="h-56 bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">Software
+                                Conception</span>
+                            <span
+                                class="px-3 py-1 text-xs font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">SaaS</span>
+                        </div>
+                        <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-4">Enterprise Analytics
+                            Dashboard</h3>
+                        <p class="text-neutral-600 dark:text-neutral-400 mb-5 leading-relaxed">Conceived and designed a
+                            real-time analytics platform processing 10M+ events daily. Product achieved product-market
+                            fit within 6 months of launch.</p>
+                        <p class="text-sm text-accent-600 dark:text-accent-400 font-medium">Role: Product Architect &
+                            Strategy Consultant</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="relative px-6 py-32">
+        <div class="absolute inset-0 gradient-soft"></div>
+
+        <div class="relative max-w-6xl mx-auto">
+            <div class="mb-20 text-center fade-in">
+                <h2
+                    class="font-display text-4xl md:text-5xl font-medium text-neutral-900 dark:text-neutral-50 mb-4 tracking-tight">
+                    Trusted By</h2>
+                <p class="text-xl text-neutral-600 dark:text-neutral-400">Organizations I've partnered with</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div
+                    class="h-32 flex items-center justify-center bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 transition-smooth hover:bg-white dark:hover:bg-neutral-900">
+                    <div class="text-neutral-300 dark:text-neutral-700 font-light text-xl">CLIENT A</div>
+                </div>
+                <div
+                    class="h-32 flex items-center justify-center bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 transition-smooth hover:bg-white dark:hover:bg-neutral-900">
+                    <div class="text-neutral-300 dark:text-neutral-700 font-light text-xl">CLIENT B</div>
+                </div>
+                <div
+                    class="h-32 flex items-center justify-center bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 transition-smooth hover:bg-white dark:hover:bg-neutral-900">
+                    <div class="text-neutral-300 dark:text-neutral-700 font-light text-xl">CLIENT C</div>
+                </div>
+                <div
+                    class="h-32 flex items-center justify-center bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 transition-smooth hover:bg-white dark:hover:bg-neutral-900">
+                    <div class="text-neutral-300 dark:text-neutral-700 font-light text-xl">CLIENT D</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="relative px-6 py-32">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-20 fade-in">
+                <h2
+                    class="font-display text-4xl md:text-5xl font-medium text-neutral-900 dark:text-neutral-50 mb-4 tracking-tight">
+                    Client Feedback</h2>
+                <p class="text-xl text-neutral-600 dark:text-neutral-400">What clients say about working together</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div
+                    class="group p-10 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 transition-smooth hover:bg-white dark:hover:bg-neutral-900">
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8 italic">"Working with
+                        Sven transformed our digital strategy completely. His ability to understand complex business
+                        requirements and translate them into actionable technical solutions is unmatched. The project
+                        was delivered ahead of schedule and exceeded all expectations."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
+                        <div>
+                            <p class="font-medium text-neutral-900 dark:text-neutral-50">Sarah Mitchell</p>
+                            <p class="text-sm text-neutral-600 dark:text-neutral-400">VP of Digital, FinTech Corp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="group p-10 bg-white/60 dark:bg-neutral-900/60 backdrop-blur-sm rounded-xl border border-neutral-200/50 dark:border-neutral-800/50 transition-smooth hover:bg-white dark:hover:bg-neutral-900">
+                    <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8 italic">"Sven's
+                        expertise in requirements engineering saved us from costly mistakes, and his UX insights
+                        dramatically improved our product's market reception. A true professional who brings both
+                        strategic thinking and hands-on execution. Highly recommended."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-full bg-neutral-200 dark:bg-neutral-800"></div>
+                        <div>
+                            <p class="font-medium text-neutral-900 dark:text-neutral-50">Dr. Marcus Weber</p>
+                            <p class="text-sm text-neutral-600 dark:text-neutral-400">CTO, HealthTech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="relative px-6 py-32">
+        <div
+            class="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-neutral-50 dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950">
+        </div>
+
+        <div class="relative max-w-4xl mx-auto text-center">
+            <h2
+                class="font-display text-4xl md:text-5xl font-medium text-neutral-900 dark:text-neutral-50 mb-6 tracking-tight">
+                Let's Work Together</h2>
+            <p class="text-xl text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                I'm currently available for select freelance projects. If you're looking for strategic guidance or
+                hands-on expertise, let's connect.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="mailto:hello@example.com"
+                    class="group px-10 py-4 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 rounded-md hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105">
+                    Send Email
+                    <span class="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener"
+                    class="px-10 py-4 border-2 border-neutral-300 dark:border-neutral-700 rounded-md hover:bg-neutral-50 dark:hover:bg-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-300 font-medium">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative px-6 py-16 border-t border-neutral-200/50 dark:border-neutral-800/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-neutral-600 dark:text-neutral-400 text-sm">
+                    © 2026 Sven Klövekorn. All rights reserved.
+                </div>
+                <div class="flex gap-8 text-sm">
+                    <a href="#"
+                        class="link-underline text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Impressum</a>
+                    <a href="#"
+                        class="link-underline text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Privacy</a>
+                    <a href="mailto:hello@example.com"
+                        class="link-underline text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.classList.toggle('dark', currentTheme === 'dark');
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+
+</html>
