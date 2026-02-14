@@ -123,90 +123,123 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Morphing Bubble Navigation */
+        /* Ultra-Smooth Morphing Bubble Navigation - FIXED */
         .nav-bubble-container {
-            width: 56px;
-            height: 56px;
-            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            max-width: 56px;
+            max-height: 56px;
+            transition: max-width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .nav-bubble-container.nav-expanded {
-            width: auto;
-            height: auto;
+            max-width: 800px;
+            max-height: 200px;
+            transition: max-width 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                max-height 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        /* Menu toggle button - fades out on expand */
+        /* Glassmorphic container - smooth morph */
+        .nav-bubble-container>div {
+            width: 56px;
+            height: 56px;
+            transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .nav-expanded>div {
+            width: auto;
+            height: auto;
+            transition: width 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                height 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* Menu toggle button - instant disappear on expand, delayed fade-in on collapse */
         .nav-toggle-wrapper {
             position: absolute;
             inset: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease-in 0.5s;
         }
 
         .nav-expanded .nav-toggle-wrapper {
             opacity: 0;
             pointer-events: none;
+            transition: opacity 0s;
         }
 
-        /* Navigation content - scales in from center */
+        /* Navigation content - smooth fade in, fast fade out */
         .nav-content {
             opacity: 0;
-            transform: scale(0.5);
-            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: opacity 0.4s ease-in 0.25s;
             pointer-events: none;
         }
 
         .nav-expanded .nav-content {
             opacity: 1;
-            transform: scale(1);
             pointer-events: auto;
+            transition: opacity 0.2s ease-out;
         }
 
-        /* Staggered animation for nav items */
+        /* Staggered animation for nav items - gentle on open, fast on close */
         .nav-item {
             opacity: 0;
-            transform: translateX(-10px);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform: translateY(8px);
+            transition: opacity 0.2s ease-out,
+                transform 0.2s ease-out;
+        }
+
+        /* First item (house) disappears instantly */
+        .nav-item:nth-child(1) {
+            transition: opacity 0s,
+                transform 0s;
         }
 
         .nav-expanded .nav-item {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateY(0);
+            transition: opacity 0.35s ease-out,
+                transform 0.35s ease-out;
         }
 
         .nav-expanded .nav-item:nth-child(1) {
-            transition-delay: 0.1s;
+            transition-delay: 0s;
         }
 
         .nav-expanded .nav-item:nth-child(2) {
-            transition-delay: 0.15s;
+            transition-delay: 0.4s;
         }
 
         .nav-expanded .nav-item:nth-child(3) {
-            transition-delay: 0.2s;
+            transition-delay: 0.45s;
         }
 
         .nav-expanded .nav-item:nth-child(4) {
-            transition-delay: 0.25s;
+            transition-delay: 0.5s;
         }
 
         .nav-expanded .nav-item:nth-child(5) {
-            transition-delay: 0.3s;
+            transition-delay: 0.55s;
         }
 
         .nav-expanded .nav-item:nth-child(6) {
-            transition-delay: 0.35s;
+            transition-delay: 0.6s;
         }
 
-        /* Menu icon rotation */
+        /* Menu icon - gentle rotation */
         .menu-icon {
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: transform 0.4s ease-in-out;
         }
 
         .nav-expanded .menu-icon {
-            transform: rotate(180deg);
+            transform: rotate(90deg);
+        }
+
+        /* Gentle hover effect */
+        .nav-bubble-container:not(.nav-expanded):hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease-out;
         }
     </style>
 </head>
