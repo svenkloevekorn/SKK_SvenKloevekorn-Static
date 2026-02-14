@@ -125,7 +125,7 @@
     </style>
 </head>
 
-<body class="bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 transition-colors duration-500">
+<body class="bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 transition-colors duration-500 pb-24">
 
     <!-- Theme Toggle -->
     <button id="themeToggle"
@@ -143,7 +143,7 @@
     </button>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center px-6 py-20 overflow-hidden">
+    <section id="hero" class="relative min-h-screen flex items-center px-6 py-20 overflow-hidden">
         <!-- Subtle gradient background -->
         <div
             class="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-neutral-50 dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950">
@@ -335,7 +335,7 @@
     </section>
 
     <!-- Experience Timeline -->
-    <section class="relative px-6 py-32">
+    <section id="experience" class="relative px-6 py-32">
         <div class="absolute inset-0 gradient-soft"></div>
 
         <div class="relative max-w-6xl mx-auto">
@@ -347,41 +347,7 @@
             </div>
 
             <div class="space-y-16">
-                <!-- marbet - Current Position -->
-                <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
-                    <div
-                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent-600 dark:bg-accent-400 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
-                    </div>
-                    <div class="mb-3">
-                        <span
-                            class="inline-block px-4 py-1 text-sm font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">Jan.
-                            2024 – Heute</span>
-                    </div>
-                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Account Manager Digital
-                        Solutions</h3>
-                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">marbet · Vollzeit</p>
-                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Schwäbisch Hall,
-                        Baden-Württemberg · Hybrid</p>
-                </div>
-
-                <!-- marbet - Senior IT Project Manager -->
-                <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
-                    <div
-                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-700 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
-                    </div>
-                    <div class="mb-3">
-                        <span
-                            class="inline-block px-4 py-1 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full">Juli
-                            2022 – Dez. 2023</span>
-                    </div>
-                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Senior IT Project
-                        Manager</h3>
-                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">marbet · Vollzeit</p>
-                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Schwäbisch Hall,
-                        Baden-Württemberg · Hybrid</p>
-                </div>
-
-                <!-- BEQN GmbH - Geschäftsführer (Current) -->
+                <!-- marbet Group - 3 Jahre 8 Monate -->
                 <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
                     <div
                         class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent-600 dark:bg-accent-400 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
@@ -389,34 +355,37 @@
                     <div class="mb-3">
                         <span
                             class="inline-block px-4 py-1 text-sm font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">Juli
-                            2022 – Heute</span>
+                            2022 – Heute · 3 Jahre 8 Monate</span>
                     </div>
-                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Geschäftsführer</h3>
-                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">BEQN GmbH · Teilzeit</p>
-                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Günzburg, Bayern ·
-                        Hybrid<br>
-                        <span class="text-sm text-neutral-500 dark:text-neutral-500 mt-2 inline-block">Kenntnisse:
-                            Virtuelle Events, Webentwicklung</span>
-                    </p>
+                    <h3 class="text-3xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">marbet</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-6 font-medium">Schwäbisch Hall,
+                        Baden-Württemberg · Hybrid</p>
+
+                    <!-- Nested positions -->
+                    <div class="space-y-6 ml-2 pl-4">
+                        <div>
+                            <div class="mb-2">
+                                <span class="text-sm text-neutral-600 dark:text-neutral-400 font-medium">Jan. 2024 –
+                                    Heute</span>
+                            </div>
+                            <h4 class="text-xl font-medium text-neutral-900 dark:text-neutral-50 mb-1">Account Manager
+                                Digital Solutions</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">Vollzeit</p>
+                        </div>
+
+                        <div>
+                            <div class="mb-2">
+                                <span class="text-sm text-neutral-600 dark:text-neutral-400 font-medium">Juli 2022 –
+                                    Dez. 2023</span>
+                            </div>
+                            <h4 class="text-xl font-medium text-neutral-900 dark:text-neutral-50 mb-1">Senior IT Project
+                                Manager</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">Vollzeit</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- BEQN GmbH - Geschäftsführer (Previous) -->
-                <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
-                    <div
-                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-700 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
-                    </div>
-                    <div class="mb-3">
-                        <span
-                            class="inline-block px-4 py-1 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full">März
-                            2014 – Juli 2022</span>
-                    </div>
-                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Geschäftsführer</h3>
-                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">BEQN GmbH · Vollzeit</p>
-                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Günzburg, Bayern ·
-                        Hybrid</p>
-                </div>
-
-                <!-- Hochschule Neu-Ulm - Dozent (Current) -->
+                <!-- BEQN GmbH - 12 Jahre -->
                 <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
                     <div
                         class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent-600 dark:bg-accent-400 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
@@ -424,33 +393,75 @@
                     <div class="mb-3">
                         <span
                             class="inline-block px-4 py-1 text-sm font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">März
-                            2013 – Heute</span>
+                            2014 – Heute · 12 Jahre</span>
                     </div>
-                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Mediendesign Dozent</h3>
-                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">Hochschule Neu-Ulm · Fakultät
-                        Informationsmanagement</p>
-                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Neu-Ulm, Bayern · Hybrid
-                    </p>
+                    <h3 class="text-3xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">BEQN GmbH</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-3 font-medium">Günzburg, Bayern · Hybrid</p>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-500 mb-6">Kenntnisse: Virtuelle Events,
+                        Webentwicklung</p>
+
+                    <!-- Nested positions -->
+                    <div class="space-y-6 ml-2 pl-4">
+                        <div>
+                            <div class="mb-2">
+                                <span class="text-sm text-neutral-600 dark:text-neutral-400 font-medium">Juli 2022 –
+                                    Heute</span>
+                            </div>
+                            <h4 class="text-xl font-medium text-neutral-900 dark:text-neutral-50 mb-1">Geschäftsführer
+                            </h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">Teilzeit</p>
+                        </div>
+
+                        <div>
+                            <div class="mb-2">
+                                <span class="text-sm text-neutral-600 dark:text-neutral-400 font-medium">März 2014 –
+                                    Juli 2022</span>
+                            </div>
+                            <h4 class="text-xl font-medium text-neutral-900 dark:text-neutral-50 mb-1">Geschäftsführer
+                            </h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">Vollzeit</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Hochschule Neu-Ulm - Zentrum für Digitale Lehre -->
+                <!-- Hochschule Neu-Ulm - 13 Jahre -->
                 <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
                     <div
-                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-700 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
+                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent-600 dark:bg-accent-400 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
                     </div>
                     <div class="mb-3">
                         <span
-                            class="inline-block px-4 py-1 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full">März
-                            2019 – Dez. 2020</span>
+                            class="inline-block px-4 py-1 text-sm font-medium bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full">März
+                            2013 – Heute · 13 Jahre</span>
                     </div>
-                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Zentrum für Digitale
-                        Lehre</h3>
-                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">Hochschule Neu-Ulm · Teilzeit</p>
-                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Neu-Ulm, Bayern · Hybrid
-                    </p>
+                    <h3 class="text-3xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Hochschule Neu-Ulm</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-6 font-medium">Neu-Ulm, Bayern · Hybrid</p>
+
+                    <!-- Nested positions -->
+                    <div class="space-y-6 ml-2 pl-4">
+                        <div>
+                            <div class="mb-2">
+                                <span class="text-sm text-neutral-600 dark:text-neutral-400 font-medium">März 2013 –
+                                    Heute</span>
+                            </div>
+                            <h4 class="text-xl font-medium text-neutral-900 dark:text-neutral-50 mb-1">Mediendesign
+                                Dozent</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">Fakultät Informationsmanagement</p>
+                        </div>
+
+                        <div>
+                            <div class="mb-2">
+                                <span class="text-sm text-neutral-600 dark:text-neutral-400 font-medium">März 2019 –
+                                    Dez. 2020</span>
+                            </div>
+                            <h4 class="text-xl font-medium text-neutral-900 dark:text-neutral-50 mb-1">Zentrum für
+                                Digitale Lehre</h4>
+                            <p class="text-neutral-600 dark:text-neutral-400">Teilzeit</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- MUNK Group - E-Commerce Manager -->
+                <!-- MUNK Group - 3 Jahre 2 Monate -->
                 <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
                     <div
                         class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-700 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
@@ -458,18 +469,20 @@
                     <div class="mb-3">
                         <span
                             class="inline-block px-4 py-1 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full">Feb.
-                            2016 – März 2019</span>
+                            2016 – März 2019 · 3 Jahre 2 Monate</span>
                     </div>
-                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">E-Commerce-Manager</h3>
-                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">MUNK Group · Vollzeit</p>
-                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Günzburg, Bayern · Vor
-                        Ort<br>
-                        <span class="text-sm text-neutral-500 dark:text-neutral-500 mt-2 inline-block">Kenntnisse:
-                            E-Commerce, Shopware</span>
-                    </p>
+                    <h3 class="text-3xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">MUNK Group</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-2 font-medium">Günzburg, Bayern · Vor Ort</p>
+
+                    <div class="mt-4">
+                        <h4 class="text-xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">E-Commerce-Manager
+                        </h4>
+                        <p class="text-neutral-600 dark:text-neutral-400 mb-2">Vollzeit</p>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-500">Kenntnisse: E-Commerce, Shopware</p>
+                    </div>
                 </div>
 
-                <!-- Wanzl Group - Onlinemarketing Manager -->
+                <!-- Wanzl Group - 2 Jahre 1 Monat -->
                 <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
                     <div
                         class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-700 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
@@ -477,16 +490,19 @@
                     <div class="mb-3">
                         <span
                             class="inline-block px-4 py-1 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full">Aug.
-                            2011 – Aug. 2013</span>
+                            2011 – Aug. 2013 · 2 Jahre 1 Monat</span>
                     </div>
-                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Onlinemarketing Manager
-                    </h3>
-                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">Wanzl Group · Vollzeit</p>
-                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Leipheim, Bayern · Vor
-                        Ort</p>
+                    <h3 class="text-3xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Wanzl Group</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-2 font-medium">Leipheim, Bayern · Vor Ort</p>
+
+                    <div class="mt-4">
+                        <h4 class="text-xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Onlinemarketing
+                            Manager</h4>
+                        <p class="text-neutral-600 dark:text-neutral-400">Vollzeit</p>
+                    </div>
                 </div>
 
-                <!-- KUKA - Werkstudent -->
+                <!-- KUKA - 11 Monate -->
                 <div class="relative pl-12 border-l-2 border-neutral-200 dark:border-neutral-800 group">
                     <div
                         class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-300 dark:bg-neutral-700 border-4 border-white dark:border-neutral-900 group-hover:scale-150 transition-transform">
@@ -494,13 +510,15 @@
                     <div class="mb-3">
                         <span
                             class="inline-block px-4 py-1 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full">März
-                            2007 – Jan. 2008</span>
+                            2007 – Jan. 2008 · 11 Monate</span>
                     </div>
-                    <h3 class="text-2xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Werkstudent Portals
-                        Content & Collaboration</h3>
-                    <p class="text-neutral-500 dark:text-neutral-500 mb-4 font-medium">KUKA</p>
-                    <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-3xl">Gersthofen, Bayern · Vor
-                        Ort</p>
+                    <h3 class="text-3xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">KUKA</h3>
+                    <p class="text-neutral-500 dark:text-neutral-500 mb-2 font-medium">Gersthofen, Bayern · Vor Ort</p>
+
+                    <div class="mt-4">
+                        <h4 class="text-xl font-medium text-neutral-900 dark:text-neutral-50 mb-2">Werkstudent Portals
+                            Content & Collaboration</h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -615,7 +633,7 @@
     </section>
 
     <!-- Client Logos -->
-    <section class="relative px-6 py-32">
+    <section id="clients" class="relative px-6 py-32">
         <div class="absolute inset-0 gradient-soft"></div>
 
         <div class="relative max-w-6xl mx-auto">
@@ -738,6 +756,56 @@
         </div>
     </footer>
 
+    <!-- Floating Bottom Navigation -->
+    <nav class="fixed bottom-10 left-1/2 -translate-x-1/2 z-50">
+        <div
+            class="px-6 py-3 bg-white/70 dark:bg-slate-900/70 backdrop-blur-lg rounded-full border border-neutral-200/50 dark:border-neutral-700/50 shadow-lg">
+            <ul class="flex items-center gap-1 md:gap-2">
+                <li>
+                    <a href="#hero"
+                        class="nav-link group flex flex-col md:flex-row items-center gap-1 md:gap-2 px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100/50 dark:hover:bg-neutral-800/50 transition-all duration-300">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                            </path>
+                        </svg>
+                        <span class="hidden md:inline">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#services"
+                        class="nav-link group flex flex-col md:flex-row items-center gap-1 md:gap-2 px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100/50 dark:hover:bg-neutral-800/50 transition-all duration-300">
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#experience"
+                        class="nav-link group flex flex-col md:flex-row items-center gap-1 md:gap-2 px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100/50 dark:hover:bg-neutral-800/50 transition-all duration-300">
+                        <span>Experience</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects"
+                        class="nav-link group flex flex-col md:flex-row items-center gap-1 md:gap-2 px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100/50 dark:hover:bg-neutral-800/50 transition-all duration-300">
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#clients"
+                        class="nav-link group flex flex-col md:flex-row items-center gap-1 md:gap-2 px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100/50 dark:hover:bg-neutral-800/50 transition-all duration-300">
+                        <span>Clients</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact"
+                        class="nav-link group flex flex-col md:flex-row items-center gap-1 md:gap-2 px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100/50 dark:hover:bg-neutral-800/50 transition-all duration-300">
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <script>
         // Theme toggle functionality
         const themeToggle = document.getElementById('themeToggle');
@@ -752,6 +820,53 @@
             const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
             localStorage.setItem('theme', newTheme);
         });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active state tracking with Intersection Observer
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const currentId = entry.target.getAttribute('id');
+
+                    // Remove active state from all links
+                    navLinks.forEach(link => {
+                        link.classList.remove('!bg-neutral-900', 'dark:!bg-neutral-100', '!text-white', 'dark:!text-neutral-900');
+                    });
+
+                    // Add active state to current link
+                    const activeLink = document.querySelector(`.nav-link[href="#${currentId}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('!bg-neutral-900', 'dark:!bg-neutral-100', '!text-white', 'dark:!text-neutral-900');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
     </script>
 </body>
 
