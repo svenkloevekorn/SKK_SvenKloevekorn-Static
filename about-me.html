@@ -241,6 +241,140 @@
             transform: scale(1.02);
             transition: transform 0.3s ease-out;
         }
+
+        /* ── Glitch Effect on Hero Portrait ── */
+        .glitch-wrapper {
+            position: relative;
+        }
+
+        .glitch-wrapper::before,
+        .glitch-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: inherit;
+            border-radius: inherit;
+            opacity: 0;
+            pointer-events: none;
+            mix-blend-mode: screen;
+            transition: opacity 0.2s;
+        }
+
+        .glitch-wrapper::before {
+            background: linear-gradient(0deg,
+                    transparent 0%,
+                    rgba(0, 255, 255, 0.15) 2%,
+                    transparent 3%,
+                    transparent 10%,
+                    rgba(255, 0, 80, 0.1) 11%,
+                    transparent 12%,
+                    transparent 20%,
+                    rgba(0, 255, 200, 0.08) 21%,
+                    transparent 22%,
+                    transparent 50%,
+                    rgba(255, 0, 80, 0.12) 51%,
+                    transparent 52%,
+                    transparent 75%,
+                    rgba(0, 255, 255, 0.1) 76%,
+                    transparent 77%);
+            z-index: 3;
+        }
+
+        .glitch-wrapper::after {
+            background: repeating-linear-gradient(0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 0, 0, 0.05) 2px,
+                    rgba(0, 0, 0, 0.05) 4px);
+            z-index: 4;
+        }
+
+        .glitch-wrapper:hover::before {
+            opacity: 1;
+            animation: glitchOverlay 0.3s steps(4) infinite;
+        }
+
+        .glitch-wrapper:hover::after {
+            opacity: 1;
+            animation: scanlines 0.1s linear infinite;
+        }
+
+        /* Glitch image layers */
+        .glitch-img {
+            position: relative;
+        }
+
+        .group:hover .glitch-img {
+            animation: glitchShift 0.4s steps(3) infinite;
+        }
+
+        /* Red / cyan channel-split shadows on hover */
+        .group:hover .glitch-img {
+            filter: drop-shadow(2px 0 0 rgba(255, 0, 80, 0.5)) drop-shadow(-2px 0 0 rgba(0, 255, 255, 0.5));
+        }
+
+        @keyframes glitchShift {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-3px, 2px);
+            }
+
+            40% {
+                transform: translate(2px, -1px);
+            }
+
+            60% {
+                transform: translate(-1px, -2px);
+            }
+
+            80% {
+                transform: translate(3px, 1px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        @keyframes glitchOverlay {
+            0% {
+                clip-path: inset(10% 0 60% 0);
+                transform: translate(-4px, 0);
+            }
+
+            25% {
+                clip-path: inset(40% 0 20% 0);
+                transform: translate(4px, 0);
+            }
+
+            50% {
+                clip-path: inset(70% 0 5% 0);
+                transform: translate(-2px, 0);
+            }
+
+            75% {
+                clip-path: inset(5% 0 80% 0);
+                transform: translate(3px, 0);
+            }
+
+            100% {
+                clip-path: inset(30% 0 30% 0);
+                transform: translate(0);
+            }
+        }
+
+        @keyframes scanlines {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 0 4px;
+            }
+        }
     </style>
 </head>
 
@@ -305,9 +439,9 @@
                             class="absolute -inset-1 bg-gradient-to-r from-neutral-200 to-neutral-300 dark:from-neutral-700 dark:to-neutral-600 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-500">
                         </div>
                         <div
-                            class="relative w-full max-w-md lg:w-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl">
+                            class="relative w-full max-w-md lg:w-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-2xl glitch-wrapper">
                             <img src="assets/sven-kloevekorn-privat.jpg" alt="Sven Klövekorn"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                class="w-full h-full object-cover glitch-img">
                         </div>
                     </div>
                 </div>
