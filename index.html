@@ -21,6 +21,23 @@
             scroll-behavior: smooth;
         }
 
+        /* Shake Easter egg */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10% { transform: translateX(-8px) rotate(-1deg); }
+            20% { transform: translateX(8px) rotate(1deg); }
+            30% { transform: translateX(-6px) rotate(-0.5deg); }
+            40% { transform: translateX(6px) rotate(0.5deg); }
+            50% { transform: translateX(-4px); }
+            60% { transform: translateX(4px); }
+            70% { transform: translateX(-2px); }
+            80% { transform: translateX(2px); }
+        }
+
+        .page-shake {
+            animation: shake 0.6s ease-in-out;
+        }
+
         /* Fade-in animation */
         @keyframes fadeIn {
             from {
@@ -1119,6 +1136,35 @@
         console.log('%c🛑 Halt, Stopp!', 'font-size:32px;font-weight:bold;color:#e74c3c;');
         console.log('%cAlter, ich seh dich.\nMach die Konsole zu und genieß die Seite wie ein normaler Mensch.\n\nIch fühl mich grad ziemlich nackt hier. 😳', 'font-size:16px;color:#888;line-height:1.8;');
         console.log('%c...außer du hast ein cooles Projekt – dann her damit! 🤙', 'font-size:16px;color:#2ecc71;line-height:1.8;font-weight:bold;');
+
+        // Easter Egg: Tab-Titel ändert sich beim Verlassen
+        const originalTitle = document.title;
+        document.addEventListener('visibilitychange', () => {
+            document.title = document.hidden ? 'Komm zurück! 😢' : originalTitle;
+        });
+
+        // Easter Egg: Seite schüttelt bei zu schnellem Scrollen
+        let navScrolling = false;
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', () => {
+                navScrolling = true;
+                setTimeout(() => navScrolling = false, 1500);
+            });
+        });
+        let lastScrollY = window.scrollY;
+        let lastScrollTime = Date.now();
+        window.addEventListener('scroll', () => {
+            if (navScrolling) return;
+            const now = Date.now();
+            const dt = now - lastScrollTime;
+            const dy = Math.abs(window.scrollY - lastScrollY);
+            if (dt > 0 && dt < 100 && dy / dt > 20) {
+                document.body.classList.add('page-shake');
+                setTimeout(() => document.body.classList.remove('page-shake'), 600);
+            }
+            lastScrollY = window.scrollY;
+            lastScrollTime = now;
+        });
     </script>
 </body>
 
