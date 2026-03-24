@@ -16,6 +16,40 @@
             font-family: 'Inter', sans-serif;
         }
 
+        /* Scroll progress bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            width: 0%;
+            background: #00FFFF;
+            z-index: 9999;
+            transition: width 0.1s linear;
+        }
+
+        /* Idle message */
+        #idle-message {
+            position: fixed;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px);
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        #idle-message.visible {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
         /* Smooth scroll behavior */
         html {
             scroll-behavior: smooth;
@@ -371,6 +405,8 @@
 </head>
 
 <body class="bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 transition-colors duration-500 pb-24">
+    <div id="scroll-progress"></div>
+    <div id="idle-message">Noch da? ☕</div>
 
     <!-- Theme Toggle -->
     <button id="themeToggle"
@@ -1165,6 +1201,27 @@
             lastScrollY = window.scrollY;
             lastScrollTime = now;
         });
+
+        // Scroll progress bar
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            document.getElementById('scroll-progress').style.width = progress + '%';
+        });
+
+        // Easter Egg: Idle-Erkennung nach 30 Sekunden
+        let idleTimer;
+        const idleMsg = document.getElementById('idle-message');
+        function resetIdle() {
+            idleMsg.classList.remove('visible');
+            clearTimeout(idleTimer);
+            idleTimer = setTimeout(() => idleMsg.classList.add('visible'), 15000);
+        }
+        ['mousemove', 'keydown', 'scroll', 'touchstart'].forEach(evt => {
+            window.addEventListener(evt, resetIdle);
+        });
+        resetIdle();
     </script>
 </body>
 
