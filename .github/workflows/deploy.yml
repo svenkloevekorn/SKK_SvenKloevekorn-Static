@@ -19,11 +19,7 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H p487050.mittwaldserver.info >> ~/.ssh/known_hosts
 
-      - name: Deploy via rsync
+      - name: Clean and deploy via scp
         run: |
-          rsync -avz --delete \
-            --exclude='.git' \
-            --exclude='.github' \
-            --exclude='.DS_Store' \
-            -e "ssh -i ~/.ssh/deploy_key" \
-            ./ p487050@p487050.mittwaldserver.info:/html/static-skk/
+          ssh -i ~/.ssh/deploy_key p487050@p487050.mittwaldserver.info "rm -rf /html/static-skk/*"
+          scp -i ~/.ssh/deploy_key -r $(ls -A | grep -v -E '^\.(git|github|DS_Store)') p487050@p487050.mittwaldserver.info:/html/static-skk/
